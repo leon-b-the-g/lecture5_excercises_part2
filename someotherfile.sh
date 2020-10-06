@@ -1,2 +1,5 @@
 Some random text
-This script is perfect according to the excercise. It is finished
+||||||| merged common ancestors
+=======
+This script is perfect according to the excercise. It is finished BUT THIS IS THE OTHER BRANCH.
+>>>>>>> Version1.1
