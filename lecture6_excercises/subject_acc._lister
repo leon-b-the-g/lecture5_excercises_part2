@@ -1,0 +1,22 @@
+#!/bin/bash
+#A programme to output the first couple of lines of blastoutput2, which should be query acc
+$match=0
+IFS=$'\t'
+#A variable to count along what line the programme is on
+echo -e "match_number\tsubject_acc"
+while read query_acc subject_acc percent_identity alignment_length mismatches gap_opens q_start q_end s_start s_end evalue bit_score
+do
+#need if statement to exclude lines that start with a #
+if test $query_acc == '#*'
+ then
+ continue
+ #here we exclude all lines starting with a # from being contributed to the output
+ else
+ match=$((match+1))
+ #This counts the line the programme is on
+echo -e "${match}\t${subject_acc}"
+fi
+done < blastoutput2.out | head -10
+
+
+
