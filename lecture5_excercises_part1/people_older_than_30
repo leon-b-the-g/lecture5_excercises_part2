@@ -1,0 +1,10 @@
+awk '{
+FS="\t" ;
+if($6 <= 1989)
+#if field 6 is less than or equal to 1989
+{if (NF == 7)
+#and then if the number of fields is equal to 7
+{print $0 ; }
+}
+}' example_people_data.tsv | wc -l
+#word count at the end
