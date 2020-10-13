@@ -1,0 +1,2 @@
+#!/bin/bash
+plotcon -sequence 590cox.fasta -winsize 4 -graph x11
