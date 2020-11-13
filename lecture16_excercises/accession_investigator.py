@@ -57,10 +57,18 @@ for element in accessions_list:
 	else:
 		continue
 
-#This for loop searches for accessions containing 3 numbers in any order DIDNT WORK YET
+#This for loop searches for accessions containing 3 numbers in any order
+#Need to use special character \d
 for element in accessions_list:
-	search1=re.search(r"[0-9]{3}",element)
-	if search1:
+	if len(re.findall(r"\d",element)) == 3:
 		print ("This accession contained 3 numbers in any order:",element)
+	else:
+		continue
+
+#This for loop searches for accessions starting with x or y and ended with e
+for element in accessions_list:
+	search1=re.search(r"\d{3,}",element)
+	if search1:
+		print ("This accession had 3 digits in a row:",element)
 	else:
 		continue
