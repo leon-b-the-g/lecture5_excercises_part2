@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+#first use of dictionaries
+
+usr_info = {}
+print ("Hi, please enter your name, age, favourite colour, whether you like python (true/false) and whether you think the earth is flat (true/false)")
+name_in = input("What is your name?")
+age_in = input ("How old are you?")
+colour_in = input("What is your favourite colour?")
+py_in = input ("do you like python?(true/false)")
+flat_in = input ("do you think the world is flat?(true/false)")
+
+#A function assigning the arguments to a dictionary
+def interrogation (name,age,colour,py,flat):
+	#print ("Is it going into the function?")
+	usr_info.clear
+	usr_info["user_name"] = name
+	usr_info["user_age"] = age
+	usr_info["user_colour"] = colour
+	usr_info["user_python"] = py
+	usr_info["user_flat"] = flat
+	return usr_info
+
+#print(interrogation("Leon","21","red","true","false"))
+
+#Run the function with the input of the user to generate the usr_info dictionary
+interrogation(name_in,age_in,colour_in,py_in,flat_in)
+
+print("So, your name is",usr_info.get("user_name"),",you are",usr_info.get("user_age"),"years old, your favourite colour is",usr_info.get("user_colour"),"The answer to whether you like python or not is:",usr_info.get("user_python"),"Also, the answer to the question whether you think th world is flat is:",usr_info.get("user_flat"))
+
+
+
+
+
+
