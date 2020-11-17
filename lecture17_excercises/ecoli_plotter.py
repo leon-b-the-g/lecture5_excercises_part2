@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 
 #os.system ("ls -hl")
 
-ecoli=  open("ecoli.txt").read().replace("\n","")[0:100000]
+ecoli=  open("ecoli.txt").read().replace("\n","")[0:]
 #print (ecoli)
 window= 10000
 AT = []
@@ -40,4 +40,6 @@ plt.title("AT frequency E coli genome")
 plt.legend()
 plt.savefig("Chart_16A.png",transparent=True)
 plt.show()
+
+
 
